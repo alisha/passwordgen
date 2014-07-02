@@ -4,6 +4,7 @@
 		<title>xkcd password generator</title>
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<?php require 'createpassword.php'; ?>
 	</head>
 
 	<body>
@@ -38,9 +39,13 @@
 					</div>
 
 					<button type="submit" class="btn btn-default">Submit</button>
-
 				</form>
 			</div>
+
+			<div class="col-md-12">
+				<?php echo $password ?>
+			</div>
+			
 		</div>
 	</body>
 </html>
