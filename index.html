@@ -1,10 +1,44 @@
-<h1>Create an XKCD style password</h1>
-<img src="images/comic.png" alt="XKCD's Password Strength Comic">
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>xkcd password generator</title>
+		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
 
-<form name="input">
-	Number of letters: <input type="number" name="numWords"><br>
-	Include a number? <input type="checkbox" name="num" value="num"><br>
-	Include a symbol? <input type="checkbox" name="symbol" value="symbol"><br>
-	Capitalize the first letter of a word? <input type="checkbox" name="capitalize" value="capitalize"><br>
-	<input type="submit" value="Submit">
-</form>
+	<body>
+		<h1>Create an XKCD style password</h1>
+		
+		<div class="col-md-6" id="picture">
+			<img src="images/comic.png" alt="XKCD's Password Strength Comic">
+		</div>
+
+		<div class="col-md-6">
+			<div class="col-md-12" id="inputForm">
+				<form role="form">
+					<div class="form-group">
+						<label for="numberOfWordsField" class="control-label">Number of words:</label>
+						<div class="row">
+							<div class="col-xs-2">
+								<input type="number" class="form-control" value="4" id="numberOfWordsField">
+							</div>
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<label for="useNumberField" class="control-label"><input type="checkbox"> Add a number?</label>
+					</div>
+
+					<div class="form-group">
+						<label for="useSymbolField" class="control-label"><input type="checkbox"> Add a symbol?</label>
+					</div>
+
+					<div class="form-group">
+						<label for="capitalizeField" class="control-label"><input type="checkbox"> Capitalize the first letter of words?</label>
+					</div>
+
+				</form>
+			</div>
+		</div>
+	</body>
+</html>
