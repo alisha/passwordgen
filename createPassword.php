@@ -4,13 +4,20 @@ $wordList = array('correct', 'horse', 'battery', 'staple');
 $symbolsList = array('@', '$', '%', '#');
 $password = '';
 
-$numWords = 4;
-$addNumber = True;
-$addSymbol = True;
+$numWords = $_POST['numberOfWords'];
+$capitalize = isset($_POST['capitalize']);
+$useNumber = isset($_POST['useNumber']);
+$useSymbol = isset($_POST['useSymbol']);
 
 for ($counter = 0; $counter < $numWords; $counter++) {
 	$index = rand(0, count($wordList) - 1);
-	$password = $password.$wordList[$index];
+	$word = $wordList[$index];
+
+	if ($capitalize) {
+		$word = ucfirst($word);
+	}
+
+	$password = $password.$word;
 	if ($counter != $numWords - 1) {
 		$password = $password."-";
 	}
@@ -19,12 +26,12 @@ for ($counter = 0; $counter < $numWords; $counter++) {
 	$wordList = array_values($wordList);
 }
 
-if ($addNumber) {
+if ($useNumber) {
 	$number = rand(0, 20);
 	$password = $password.$number;
 }
 
-if ($addSymbol) {
+if ($useSymbol) {
 	$index = rand(0, count($symbolsList) - 1);
 	$password = $password.$symbolsList[$index];
 }

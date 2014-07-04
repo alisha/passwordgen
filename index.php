@@ -16,26 +16,31 @@
 
 		<div class="col-md-6">
 			<div class="col-md-12" id="inputForm">
-				<form role="form">
+				
+				<!-- Get the number of words for the password -->
+				<form role="form" action="createPassword.php" method="post">
 					<div class="form-group">
-						<label for="numberOfWordsField" class="control-label">Number of words:</label>
+						<label class="control-label">Number of words:</label>
 						<div class="row">
 							<div class="col-xs-2">
-								<input type="number" class="form-control" value="4" id="numberOfWordsField">
+								<input type="number" class="form-control" value="4" name="numberOfWords">
 							</div>
 						</div>
 					</div>
 					
+					<!-- Ask if the password should have a number -->
 					<div class="form-group">
-						<label for="useNumberField" class="control-label"><input type="checkbox"> Add a number?</label>
+						<label class="control-label"><input type="checkbox" name="useNumber" value="yes"> Add a number?</label>
 					</div>
 
+					<!-- Ask if the password should have a symbol -->
 					<div class="form-group">
-						<label for="useSymbolField" class="control-label"><input type="checkbox"> Add a symbol?</label>
+						<label class="control-label"><input type="checkbox" name="useSymbol" value="yes"> Add a symbol?</label>
 					</div>
 
+					<!-- Ask if the password should capitalize the first letter of each word -->
 					<div class="form-group">
-						<label for="capitalizeField" class="control-label"><input type="checkbox"> Capitalize the first letter of words?</label>
+						<label class="control-label"><input type="checkbox" name="capitalize" value="yes"> Capitalize the first letter of each word?</label>
 					</div>
 
 					<button type="submit" class="btn btn-default">Submit</button>
