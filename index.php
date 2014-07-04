@@ -8,7 +8,7 @@
 	</head>
 
 	<body>
-		<h1>Create an XKCD style password</h1>
+		<h1>Create an xkcd style password</h1>
 		
 		<div class="col-md-6" id="picture">
 			<img src="images/comic.png" alt="XKCD's Password Strength Comic">
@@ -18,7 +18,7 @@
 			<div class="col-md-12" id="inputForm">
 				
 				<!-- Get the number of words for the password -->
-				<form role="form" action="createPassword.php" method="post">
+				<form role="form" action="index.php" method="post">
 					<div class="form-group">
 						<label class="control-label">Number of words:</label>
 						<div class="row">
@@ -47,7 +47,7 @@
 				</form>
 			</div>
 
-			<div class="col-md-12">
+			<div class="col-md-12" id="showPassword">
 				<?php echo $password ?>
 			</div>
 			

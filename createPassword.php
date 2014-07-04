@@ -1,6 +1,6 @@
 <?php
 
-$wordList = array('correct', 'horse', 'battery', 'staple');
+$wordList = array('correct', 'horse', 'battery', 'staple', 'running', 'dog', 'headphones', 'award', 'books', 'clothes', 'owl', 'app');
 $symbolsList = array('@', '$', '%', '#');
 $password = '';
 
@@ -35,5 +35,3 @@ if ($useSymbol) {
 	$index = rand(0, count($symbolsList) - 1);
 	$password = $password.$symbolsList[$index];
 }
-
-echo $password;
