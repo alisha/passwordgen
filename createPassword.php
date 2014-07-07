@@ -1,6 +1,6 @@
 <?php
 
-$wordList = array('correct', 'horse', 'battery', 'staple', 'running', 'dog', 'headphones', 'award', 'books', 'clothes', 'owl', 'app', 'computer', 'cookies', 'hamburger', 'milk', 'binder', 'poster');
+$wordList = $masterWordList;
 $symbolsList = array('@', '$', '%', '#');
 $password = '';
 
@@ -39,3 +39,5 @@ if ($useSymbol) {
 	$index = rand(0, count($symbolsList) - 1);
 	$password = $password.$symbolsList[$index];
 }
+
+$password = str_replace(' ', '', $password);

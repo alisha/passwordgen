@@ -4,7 +4,8 @@
 		<title>xkcd password generator</title>
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 		<link rel="stylesheet" type="text/css" href="css/style.css">
-		<?php require 'createpassword.php'; ?>
+		<?php require 'getWords.php'; ?>
+		<?php require 'createPassword.php'; ?>
 	</head>
 
 	<body>
@@ -22,9 +23,10 @@
 						<div class="form-group">
 							<label class="control-label">Number of words:</label>
 							<div class="row">
-								<div class="col-xs-3">
-									<input type="number" class="form-control" value="4" name="numberOfWords" max="<?php echo count($wordList) ?>">
+								<div class="col-xs-4">
+									<input type="number" class="form-control" value="4" name="numberOfWords" max="<?php echo count($masterWordList) ?>">
 								</div>
+								<span class="help-block">Max: <?php echo count($masterWordList); ?></span>
 							</div>
 						</div>
 						
