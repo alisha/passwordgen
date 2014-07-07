@@ -6,6 +6,11 @@ img {
 	width: 100%;
 }
 
+.radio {
+	margin-top: 0px;
+	margin-left: 20px;
+}
+
 #showPassword {
 	margin-top: 4%;
 }

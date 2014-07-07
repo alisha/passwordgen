@@ -23,7 +23,7 @@
 						<label class="control-label">Number of words:</label>
 						<div class="row">
 							<div class="col-xs-2">
-								<input type="number" class="form-control" value="4" name="numberOfWords">
+								<input type="number" class="form-control" value="4" name="numberOfWords" max="<?php echo count($wordList) ?>">
 							</div>
 						</div>
 					</div>
@@ -38,9 +38,14 @@
 						<label class="control-label"><input type="checkbox" name="useSymbol" value="yes"> Add a symbol?</label>
 					</div>
 
-					<!-- Ask if the password should capitalize the first letter of each word -->
+					<!-- Ask about capitalization -->
 					<div class="form-group">
-						<label class="control-label"><input type="checkbox" name="capitalize" value="yes"> Capitalize the first letter of each word?</label>
+						<label>Capitalization:</label><br>
+						<div class="radio">
+							<input type="radio" name="capitalization" value="allCaps">ALL CAPS</br>
+							<input type="radio" name="capitalization" value="capFirstLetter" checked>Capitalize The First Letter Of Each Word</br>
+							<input type="radio" name="capitalization" value="allLower">all lowercase</br>
+						</div>
 					</div>
 
 					<button type="submit" class="btn btn-default">Submit</button>
@@ -48,7 +53,7 @@
 			</div>
 
 			<div class="col-md-12" id="showPassword">
-				<?php echo $password ?>
+				<h2>Your password is: <?php echo $password ?></h2>
 			</div>
 			
 		</div>

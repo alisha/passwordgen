@@ -1,11 +1,11 @@
 <?php
 
-$wordList = array('correct', 'horse', 'battery', 'staple', 'running', 'dog', 'headphones', 'award', 'books', 'clothes', 'owl', 'app');
+$wordList = array('correct', 'horse', 'battery', 'staple', 'running', 'dog', 'headphones', 'award', 'books', 'clothes', 'owl', 'app', 'computer', 'cookies', 'hamburger', 'milk', 'binder', 'poster');
 $symbolsList = array('@', '$', '%', '#');
 $password = '';
 
 $numWords = $_POST['numberOfWords'];
-$capitalize = isset($_POST['capitalize']);
+$capitalize = $_POST['capitalization'];
 $useNumber = isset($_POST['useNumber']);
 $useSymbol = isset($_POST['useSymbol']);
 
@@ -13,8 +13,12 @@ for ($counter = 0; $counter < $numWords; $counter++) {
 	$index = rand(0, count($wordList) - 1);
 	$word = $wordList[$index];
 
-	if ($capitalize) {
+	if ($capitalize == 'capFirstLetter') {
 		$word = ucfirst($word);
+	} else if ($capitalize == 'allCaps') {
+		$word = strtoupper($word);
+	} else { //all lower case
+		$word = strtolower($word);
 	}
 
 	$password = $password.$word;
