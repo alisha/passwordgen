@@ -16,44 +16,47 @@
 
 		<div class="col-md-6">
 			<div class="col-md-12" id="inputForm">
-				
-				<!-- Get the number of words for the password -->
-				<form role="form" action="index.php" method="post">
-					<div class="form-group">
-						<label class="control-label">Number of words:</label>
-						<div class="row">
-							<div class="col-xs-2">
-								<input type="number" class="form-control" value="4" name="numberOfWords" max="<?php echo count($wordList) ?>">
+				<div class="col-md-6">
+					<!-- Get the number of words for the password -->
+					<form role="form" action="index.php" method="post">
+						<div class="form-group">
+							<label class="control-label">Number of words:</label>
+							<div class="row">
+								<div class="col-xs-3">
+									<input type="number" class="form-control" value="4" name="numberOfWords" max="<?php echo count($wordList) ?>">
+								</div>
 							</div>
 						</div>
-					</div>
-					
-					<!-- Ask if the password should have a number -->
-					<div class="form-group">
-						<label class="control-label"><input type="checkbox" name="useNumber" value="yes"> Add a number?</label>
-					</div>
+						
+						<!-- Ask if the password should have a number -->
+						<div class="form-group">
+							<label class="control-label"><input type="checkbox" name="useNumber" value="yes"> Add a number?</label>
+						</div>
 
-					<!-- Ask if the password should have a symbol -->
-					<div class="form-group">
-						<label class="control-label"><input type="checkbox" name="useSymbol" value="yes"> Add a symbol?</label>
-					</div>
-
-					<!-- Ask about capitalization -->
-					<div class="form-group">
-						<label>Capitalization:</label><br>
-						<div class="radio">
-							<input type="radio" name="capitalization" value="allCaps">ALL CAPS</br>
-							<input type="radio" name="capitalization" value="capFirstLetter" checked>Capitalize The First Letter Of Each Word</br>
-							<input type="radio" name="capitalization" value="allLower">all lowercase</br>
+						<!-- Ask if the password should have a symbol -->
+						<div class="form-group">
+							<label class="control-label"><input type="checkbox" name="useSymbol" value="yes"> Add a symbol?</label>
 						</div>
 					</div>
 
-					<button type="submit" class="btn btn-default">Submit</button>
+					<div class="col-md-6">
+						<!-- Ask about capitalization -->
+						<div class="form-group">
+							<label>Capitalization:</label><br>
+							<div class="radio">
+								<input type="radio" name="capitalization" value="allCaps">ALL CAPS</br>
+								<input type="radio" name="capitalization" value="capFirstLetter" checked>Capitalize The First Letter Of Each Word</br>
+								<input type="radio" name="capitalization" value="allLower">all lowercase</br>
+							</div>
+						</div>
+					
+						<button type="submit" class="btn btn-default">Submit</button>
+					</div>
 				</form>
 			</div>
 
 			<div class="col-md-12" id="showPassword">
-				<h2>Your password is: <?php echo $password ?></h2>
+				<h2>Your password is: <span id="password"><?php echo $password ?></span></h2>
 			</div>
 			
 		</div>
