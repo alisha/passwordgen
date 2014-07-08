@@ -17,9 +17,9 @@
 
 		<div class="col-md-6">
 			<div class="col-md-12" id="inputForm">
-				<div class="col-md-6">
+				<form role="form" action="index.php" method="post">
+					<div class="col-md-6">
 					<!-- Get the number of words for the password -->
-					<form role="form" action="index.php" method="post">
 						<div class="form-group">
 							<label class="control-label">Number of words:</label>
 							<div class="row">
@@ -46,9 +46,9 @@
 						<div class="form-group">
 							<label>Capitalization:</label><br>
 							<div class="radio">
-								<input type="radio" name="capitalization" value="allCaps">ALL CAPS</br>
-								<input type="radio" name="capitalization" value="capFirstLetter" checked>Capitalize The First Letter Of Each Word</br>
-								<input type="radio" name="capitalization" value="allLower">all lowercase</br>
+								<input type="radio" name="capitalization" value="allCaps">ALL CAPS<br>
+								<input type="radio" name="capitalization" value="capFirstLetter" checked>Capitalize The First Letter Of Each Word<br>
+								<input type="radio" name="capitalization" value="allLower">all lowercase<br>
 							</div>
 						</div>
 					
